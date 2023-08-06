@@ -98,6 +98,8 @@ class Conv2d:
                 )
                 out[i, j] = np.sum(iteration)
         return out
+    def __call__(self, x):
+        return self.forward(x)
 
 
 class Patch_Generator:
